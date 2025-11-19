@@ -10,3 +10,6 @@ data/processed/Trips_2025_07_Clean.csv
 data/processed/Trips_2025_08_Clean.csv
 data/processed/Trips_2025_09_Clean.csv
 data/processed/Trips_2025_10_Clean.csv
+data/processed/Trips_SQL_2025_05_10.csv
+data/processed/Stations_WithArea_SQL.csv
+.env
