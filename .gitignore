@@ -1,0 +1,12 @@
+.vscode/
+.DS_Store
+data/raw/
+data/processed/TripsCombainedSixMonth.csv
+data/processed/Stations_2025.csv
+data/processed/Stations_WithArea.csv
+data/processed/Trips_2025_05_Clean.csv
+data/processed/Trips_2025_06_Clean.csv
+data/processed/Trips_2025_07_Clean.csv
+data/processed/Trips_2025_08_Clean.csv
+data/processed/Trips_2025_09_Clean.csv
+data/processed/Trips_2025_10_Clean.csv
