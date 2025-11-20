@@ -1,0 +1,2425 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.1003.1601                               -->
+<workbook original-version='18.1' source-build='2025.2.4 (20252.25.1003.1601)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <_.fcp.PatternedLineMarks.true...PatternedLineMarks />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Morning_commute' inline='true' name='federated.1b05i5s0zwyrm11gu25p81km7p9n' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Morning_commute' name='textscan.1oskags0f2iu5j1geul8j1n7mgvr'>
+            <connection class='textscan' directory='/Users/rifat-mac/Downloads' filename='Morning_commute.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1oskags0f2iu5j1geul8j1n7mgvr' name='Morning_commute.csv' table='[Morning_commute#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='string' name='StationName' ordinal='0' />
+            <column datatype='string' name='Area' ordinal='1' />
+            <column datatype='integer' name='Starts' ordinal='2' />
+            <column datatype='integer' name='Ends' ordinal='3' />
+            <column datatype='integer' name='NetFlow' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Morning_commute.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StationName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[StationName]</local-name>
+            <parent-name>[Morning_commute.csv]</parent-name>
+            <remote-alias>StationName</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Morning_commute.csv_F3355BD8DA2C49DA8BFF786EC093B375]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Area</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Area]</local-name>
+            <parent-name>[Morning_commute.csv]</parent-name>
+            <remote-alias>Area</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Morning_commute.csv_F3355BD8DA2C49DA8BFF786EC093B375]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Starts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Starts]</local-name>
+            <parent-name>[Morning_commute.csv]</parent-name>
+            <remote-alias>Starts</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Morning_commute.csv_F3355BD8DA2C49DA8BFF786EC093B375]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ends</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Ends]</local-name>
+            <parent-name>[Morning_commute.csv]</parent-name>
+            <remote-alias>Ends</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Morning_commute.csv_F3355BD8DA2C49DA8BFF786EC093B375]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NetFlow</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NetFlow]</local-name>
+            <parent-name>[Morning_commute.csv]</parent-name>
+            <remote-alias>NetFlow</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Morning_commute.csv_F3355BD8DA2C49DA8BFF786EC093B375]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Area]' role='dimension' type='nominal' />
+      <column caption='Net Flow' datatype='integer' name='[NetFlow]' role='measure' type='quantitative' />
+      <column caption='Station Name' datatype='string' name='[StationName]' role='dimension' type='nominal' />
+      <column caption='Morning_commute.csv' datatype='table' name='[__tableau_internal_object_id__].[Morning_commute.csv_F3355BD8DA2C49DA8BFF786EC093B375]' role='measure' type='quantitative' />
+      <column-instance column='[Area]' derivation='None' name='[none:Area:nk]' pivot='key' type='nominal' />
+      <group caption='Action (Area,Station Name)' hidden='true' name='[Action (Area,Station Name)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Area]' />
+          <groupfilter function='level-members' level='[StationName]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/lv/fmcgg9k17hl6v_1h3rz6d7rm0000gn/T/tableau-temp/#TableauTemp_1t6upfg1t4la7m1f0if6i00c1qml.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/20/2025 11:16:31 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>StationName</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[StationName]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>StationName</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Morning_commute.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>252</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Area</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Area]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Area</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Morning_commute.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>79</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Starts</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Starts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Starts</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Morning_commute.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>237</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Ends</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Ends]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Ends</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Morning_commute.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>224</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NetFlow</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[NetFlow]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NetFlow</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Morning_commute.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>233</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Area:nk]' palette='superfishel_stone_10_0' type='palette'>
+            <map to='#49525e'>
+              <bucket>&quot;Vika&quot;</bucket>
+            </map>
+            <map to='#4f6980'>
+              <bucket>&quot;Bjølsen&quot;</bucket>
+            </map>
+            <map to='#55ad89'>
+              <bucket>&quot;Bislett&quot;</bucket>
+            </map>
+            <map to='#55ad89'>
+              <bucket>&quot;Galgeberg&quot;</bucket>
+            </map>
+            <map to='#55ad89'>
+              <bucket>&quot;Hoff&quot;</bucket>
+            </map>
+            <map to='#55ad89'>
+              <bucket>&quot;Marienlyst&quot;</bucket>
+            </map>
+            <map to='#55ad89'>
+              <bucket>&quot;Sagene&quot;</bucket>
+            </map>
+            <map to='#55ad89'>
+              <bucket>&quot;Sofienlund&quot;</bucket>
+            </map>
+            <map to='#55ad89'>
+              <bucket>&quot;Vålerenga&quot;</bucket>
+            </map>
+            <map to='#57626d'>
+              <bucket>&quot;Tullin&quot;</bucket>
+            </map>
+            <map to='#6388b4'>
+              <bucket>&quot;Adamstuen&quot;</bucket>
+            </map>
+            <map to='#6388b4'>
+              <bucket>&quot;Dælenenga&quot;</bucket>
+            </map>
+            <map to='#6388b4'>
+              <bucket>&quot;Frøen&quot;</bucket>
+            </map>
+            <map to='#6388b4'>
+              <bucket>&quot;Gullhaug&quot;</bucket>
+            </map>
+            <map to='#6388b4'>
+              <bucket>&quot;Øvre Blindern&quot;</bucket>
+            </map>
+            <map to='#6388b4'>
+              <bucket>&quot;Skarpsno&quot;</bucket>
+            </map>
+            <map to='#66717b'>
+              <bucket>&quot;Tjuvholmen&quot;</bucket>
+            </map>
+            <map to='#767676'>
+              <bucket>&quot;Bryn&quot;</bucket>
+            </map>
+            <map to='#767676'>
+              <bucket>&quot;Fredensborg&quot;</bucket>
+            </map>
+            <map to='#767676'>
+              <bucket>&quot;Keyserløkka&quot;</bucket>
+            </map>
+            <map to='#767676'>
+              <bucket>&quot;Løren&quot;</bucket>
+            </map>
+            <map to='#767676'>
+              <bucket>&quot;Torshov&quot;</bucket>
+            </map>
+            <map to='#889296'>
+              <bucket>&quot;Sentrum&quot;</bucket>
+            </map>
+            <map to='#8cc2ca'>
+              <bucket>&quot;Barcode&quot;</bucket>
+            </map>
+            <map to='#8cc2ca'>
+              <bucket>&quot;Ekebergskrenten&quot;</bucket>
+            </map>
+            <map to='#8cc2ca'>
+              <bucket>&quot;Gamle Aker&quot;</bucket>
+            </map>
+            <map to='#8cc2ca'>
+              <bucket>&quot;Grünerløkka&quot;</bucket>
+            </map>
+            <map to='#8cc2ca'>
+              <bucket>&quot;Marienfryd&quot;</bucket>
+            </map>
+            <map to='#8cc2ca'>
+              <bucket>&quot;Ruseløkka&quot;</bucket>
+            </map>
+            <map to='#8cc2ca'>
+              <bucket>&quot;Vækerø&quot;</bucket>
+            </map>
+            <map to='#9ba2a4'>
+              <bucket>&quot;Regjeringskvartalet&quot;</bucket>
+            </map>
+            <map to='#a9b5ae'>
+              <bucket>&quot;Bolteløkka&quot;</bucket>
+            </map>
+            <map to='#a9b5ae'>
+              <bucket>&quot;Framnes&quot;</bucket>
+            </map>
+            <map to='#a9b5ae'>
+              <bucket>&quot;Grønvoll&quot;</bucket>
+            </map>
+            <map to='#a9b5ae'>
+              <bucket>&quot;Økernly&quot;</bucket>
+            </map>
+            <map to='#a9b5ae'>
+              <bucket>&quot;Sjølyst&quot;</bucket>
+            </map>
+            <map to='#a9b5ae'>
+              <bucket>&quot;Tøyen&quot;</bucket>
+            </map>
+            <map to='#a9b5ae'>
+              <bucket>&quot;Volvat&quot;</bucket>
+            </map>
+            <map to='#aeb2b3'>
+              <bucket>&quot;Kvadraturen&quot;</bucket>
+            </map>
+            <map to='#baa094'>
+              <bucket>&quot;Blindern&quot;</bucket>
+            </map>
+            <map to='#baa094'>
+              <bucket>&quot;Filipstad&quot;</bucket>
+            </map>
+            <map to='#baa094'>
+              <bucket>&quot;Kampen&quot;</bucket>
+            </map>
+            <map to='#baa094'>
+              <bucket>&quot;Normannsløkka&quot;</bucket>
+            </map>
+            <map to='#baa094'>
+              <bucket>&quot;Sinsenengen&quot;</bucket>
+            </map>
+            <map to='#baa094'>
+              <bucket>&quot;St. Hanshaugen&quot;</bucket>
+            </map>
+            <map to='#baa094'>
+              <bucket>&quot;Vinderen&quot;</bucket>
+            </map>
+            <map to='#bb7693'>
+              <bucket>&quot;Bjørvika&quot;</bucket>
+            </map>
+            <map to='#bb7693'>
+              <bucket>&quot;Fagerborg&quot;</bucket>
+            </map>
+            <map to='#bb7693'>
+              <bucket>&quot;Gimle&quot;</bucket>
+            </map>
+            <map to='#bb7693'>
+              <bucket>&quot;Nordre Aker&quot;</bucket>
+            </map>
+            <map to='#bb7693'>
+              <bucket>&quot;Sofienberg&quot;</bucket>
+            </map>
+            <map to='#bb7693'>
+              <bucket>&quot;Teglverkstomta&quot;</bucket>
+            </map>
+            <map to='#bfbb60'>
+              <bucket>&quot;Ila&quot;</bucket>
+            </map>
+            <map to='#c2c4c3'>
+              <bucket>&quot;Hausmannskvartalene&quot;</bucket>
+            </map>
+            <map to='#c3bc3f'>
+              <bucket>&quot;Bygdøy&quot;</bucket>
+            </map>
+            <map to='#c3bc3f'>
+              <bucket>&quot;Ensjø&quot;</bucket>
+            </map>
+            <map to='#c3bc3f'>
+              <bucket>&quot;Gamlebyen&quot;</bucket>
+            </map>
+            <map to='#c3bc3f'>
+              <bucket>&quot;Meyerløkka&quot;</bucket>
+            </map>
+            <map to='#c3bc3f'>
+              <bucket>&quot;Sjøtomta&quot;</bucket>
+            </map>
+            <map to='#c3bc3f'>
+              <bucket>&quot;Søndre Tåsen&quot;</bucket>
+            </map>
+            <map to='#c3bc3f'>
+              <bucket>&quot;Valleløkken&quot;</bucket>
+            </map>
+            <map to='#d5d5d5'>
+              <bucket>&quot;Grønland&quot;</bucket>
+            </map>
+            <map to='#d7ce9f'>
+              <bucket>&quot;Sandaker&quot;</bucket>
+            </map>
+            <map to='#ef6f6a'>
+              <bucket>&quot;Åsen&quot;</bucket>
+            </map>
+            <map to='#ef6f6a'>
+              <bucket>&quot;Frogner&quot;</bucket>
+            </map>
+            <map to='#ef6f6a'>
+              <bucket>&quot;Gamle Oslo&quot;</bucket>
+            </map>
+            <map to='#ef6f6a'>
+              <bucket>&quot;Hegdehaugen&quot;</bucket>
+            </map>
+            <map to='#ef6f6a'>
+              <bucket>&quot;Makrellbekken&quot;</bucket>
+            </map>
+            <map to='#ef6f6a'>
+              <bucket>&quot;Rosenhoff&quot;</bucket>
+            </map>
+            <map to='#ef6f6a'>
+              <bucket>&quot;Uranienborg&quot;</bucket>
+            </map>
+            <map to='#f47942'>
+              <bucket>&quot;Lovisenberg&quot;</bucket>
+            </map>
+            <map to='#fbb04e'>
+              <bucket>&quot;Rodeløkka&quot;</bucket>
+            </map>
+            <map to='#ffae34'>
+              <bucket>&quot;Aker brygge&quot;</bucket>
+            </map>
+            <map to='#ffae34'>
+              <bucket>&quot;Carl Berner&quot;</bucket>
+            </map>
+            <map to='#ffae34'>
+              <bucket>&quot;Enerhaugen&quot;</bucket>
+            </map>
+            <map to='#ffae34'>
+              <bucket>&quot;Lindern&quot;</bucket>
+            </map>
+            <map to='#ffae34'>
+              <bucket>&quot;Majorstuen&quot;</bucket>
+            </map>
+            <map to='#ffae34'>
+              <bucket>&quot;Skillebekk&quot;</bucket>
+            </map>
+            <map to='#ffae34'>
+              <bucket>&quot;Ullevål hageby&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='Morning_commute.csv' id='Morning_commute.csv_F3355BD8DA2C49DA8BFF786EC093B375'>
+            <properties context=''>
+              <relation connection='textscan.1oskags0f2iu5j1geul8j1n7mgvr' name='Morning_commute.csv' table='[Morning_commute#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='string' name='StationName' ordinal='0' />
+                  <column datatype='string' name='Area' ordinal='1' />
+                  <column datatype='integer' name='Starts' ordinal='2' />
+                  <column datatype='integer' name='Ends' ordinal='3' />
+                  <column datatype='integer' name='NetFlow' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Station_load' inline='true' name='federated.17i7q2e0e0lij611eu1v41o3ybop' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Station_load' name='textscan.0s03fdq195mwwr1dt5ryt18ngiqe'>
+            <connection class='textscan' directory='/Users/rifat-mac/Downloads' filename='Station_load.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0s03fdq195mwwr1dt5ryt18ngiqe' name='Station_load.csv' table='[Station_load#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='integer' name='StationId' ordinal='0' />
+            <column datatype='string' name='StationName' ordinal='1' />
+            <column datatype='string' name='Area' ordinal='2' />
+            <column datatype='real' name='Latitude' ordinal='3' />
+            <column datatype='real' name='Longitude' ordinal='4' />
+            <column datatype='integer' name='Capacity' ordinal='5' />
+            <column datatype='integer' name='TripsStarted' ordinal='6' />
+            <column datatype='integer' name='TripsEnded' ordinal='7' />
+            <column datatype='integer' name='TotalTrips' ordinal='8' />
+            <column datatype='real' name='TripsPerDock' ordinal='9' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Station_load.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StationId</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[StationId]</local-name>
+            <parent-name>[Station_load.csv]</parent-name>
+            <remote-alias>StationId</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StationName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[StationName]</local-name>
+            <parent-name>[Station_load.csv]</parent-name>
+            <remote-alias>StationName</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Area</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Area]</local-name>
+            <parent-name>[Station_load.csv]</parent-name>
+            <remote-alias>Area</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[Station_load.csv]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[Station_load.csv]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Capacity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Capacity]</local-name>
+            <parent-name>[Station_load.csv]</parent-name>
+            <remote-alias>Capacity</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TripsStarted</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TripsStarted]</local-name>
+            <parent-name>[Station_load.csv]</parent-name>
+            <remote-alias>TripsStarted</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TripsEnded</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TripsEnded]</local-name>
+            <parent-name>[Station_load.csv]</parent-name>
+            <remote-alias>TripsEnded</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TotalTrips</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TotalTrips]</local-name>
+            <parent-name>[Station_load.csv]</parent-name>
+            <remote-alias>TotalTrips</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TripsPerDock</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[TripsPerDock]</local-name>
+            <parent-name>[Station_load.csv]</parent-name>
+            <remote-alias>TripsPerDock</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Station Id' datatype='integer' name='[StationId]' role='dimension' type='ordinal' />
+      <column caption='Station Name' datatype='string' name='[StationName]' role='dimension' type='nominal' />
+      <column caption='Total Trips' datatype='integer' name='[TotalTrips]' role='measure' type='quantitative' />
+      <column caption='Trips Ended' datatype='integer' name='[TripsEnded]' role='measure' type='quantitative' />
+      <column caption='Trips Per Dock' datatype='real' name='[TripsPerDock]' role='measure' type='quantitative' />
+      <column caption='Trips Started' datatype='integer' name='[TripsStarted]' role='measure' type='quantitative' />
+      <column caption='Station_load.csv' datatype='table' name='[__tableau_internal_object_id__].[Station_load.csv_A161E7C92BA44553A1E89504456014F1]' role='measure' type='quantitative' />
+      <column-instance column='[Latitude]' derivation='None' name='[none:Latitude:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Longitude]' derivation='None' name='[none:Longitude:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[TotalTrips]' derivation='None' name='[none:TotalTrips:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[TripsPerDock]' derivation='None' name='[none:TripsPerDock:qk]' pivot='key' type='quantitative' />
+      <group hidden='true' name='[Exclusions (Latitude,Longitude,Total Trips,Trips Per Dock)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:Latitude:qk]' />
+          <groupfilter function='level-members' level='[none:Longitude:qk]' />
+          <groupfilter function='level-members' level='[none:TotalTrips:qk]' />
+          <groupfilter function='level-members' level='[none:TripsPerDock:qk]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/lv/fmcgg9k17hl6v_1h3rz6d7rm0000gn/T/tableau-temp/#TableauTemp_0rqhy4w0ylk1lg14us7zz0ssfy09.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/20/2025 12:14:51 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>StationId</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[StationId]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>StationId</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Station_load.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>252</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>StationName</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[StationName]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>StationName</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Station_load.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>252</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Area</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Area]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Area</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Station_load.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>79</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Latitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Latitude</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Station_load.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>251</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Longitude</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Station_load.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>252</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Capacity</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Capacity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Capacity</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Station_load.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TripsStarted</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[TripsStarted]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TripsStarted</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Station_load.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>249</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TripsEnded</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[TripsEnded]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TripsEnded</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Station_load.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>245</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TotalTrips</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[TotalTrips]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TotalTrips</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Station_load.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>250</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TripsPerDock</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[TripsPerDock]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TripsPerDock</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Station_load.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>252</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Station_load.csv_A161E7C92BA44553A1E89504456014F1]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='Station_load.csv' id='Station_load.csv_A161E7C92BA44553A1E89504456014F1'>
+            <properties context=''>
+              <relation connection='textscan.0s03fdq195mwwr1dt5ryt18ngiqe' name='Station_load.csv' table='[Station_load#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='integer' name='StationId' ordinal='0' />
+                  <column datatype='string' name='StationName' ordinal='1' />
+                  <column datatype='string' name='Area' ordinal='2' />
+                  <column datatype='real' name='Latitude' ordinal='3' />
+                  <column datatype='real' name='Longitude' ordinal='4' />
+                  <column datatype='integer' name='Capacity' ordinal='5' />
+                  <column datatype='integer' name='TripsStarted' ordinal='6' />
+                  <column datatype='integer' name='TripsEnded' ordinal='7' />
+                  <column datatype='integer' name='TotalTrips' ordinal='8' />
+                  <column datatype='real' name='TripsPerDock' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='MainTrip' inline='true' name='federated.0a7men400lmmeh11pk3ml0ti9tlf' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='MainTrip' name='textscan.1f5up1400az4e812a0xlo17u9dsw'>
+            <connection class='textscan' directory='/Users/rifat-mac/Downloads' filename='MainTrip.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1f5up1400az4e812a0xlo17u9dsw' name='MainTrip.csv' table='[MainTrip#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='integer' name='DurationSec' ordinal='0' />
+            <column datatype='real' name='DurationMin' ordinal='1' />
+            <column datatype='datetime' name='StartedAtOslo' ordinal='2' />
+            <column datatype='datetime' name='EndedAtOslo' ordinal='3' />
+            <column datatype='integer' name='StartHourOslo' ordinal='4' />
+            <column datatype='integer' name='DayOfWeek' ordinal='5' />
+            <column datatype='integer' name='IsWeekend' ordinal='6' />
+            <column datatype='string' name='TimeOfDay' ordinal='7' />
+            <column datatype='integer' name='StartStationId' ordinal='8' />
+            <column datatype='integer' name='EndStationId' ordinal='9' />
+            <column datatype='string' name='Month' ordinal='10' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[MainTrip.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DurationSec</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DurationSec]</local-name>
+            <parent-name>[MainTrip.csv]</parent-name>
+            <remote-alias>DurationSec</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DurationMin</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[DurationMin]</local-name>
+            <parent-name>[MainTrip.csv]</parent-name>
+            <remote-alias>DurationMin</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StartedAtOslo</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[StartedAtOslo]</local-name>
+            <parent-name>[MainTrip.csv]</parent-name>
+            <remote-alias>StartedAtOslo</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EndedAtOslo</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[EndedAtOslo]</local-name>
+            <parent-name>[MainTrip.csv]</parent-name>
+            <remote-alias>EndedAtOslo</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StartHourOslo</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[StartHourOslo]</local-name>
+            <parent-name>[MainTrip.csv]</parent-name>
+            <remote-alias>StartHourOslo</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DayOfWeek</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DayOfWeek]</local-name>
+            <parent-name>[MainTrip.csv]</parent-name>
+            <remote-alias>DayOfWeek</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IsWeekend</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[IsWeekend]</local-name>
+            <parent-name>[MainTrip.csv]</parent-name>
+            <remote-alias>IsWeekend</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TimeOfDay</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TimeOfDay]</local-name>
+            <parent-name>[MainTrip.csv]</parent-name>
+            <remote-alias>TimeOfDay</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StartStationId</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[StartStationId]</local-name>
+            <parent-name>[MainTrip.csv]</parent-name>
+            <remote-alias>StartStationId</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EndStationId</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[EndStationId]</local-name>
+            <parent-name>[MainTrip.csv]</parent-name>
+            <remote-alias>EndStationId</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Month</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Month]</local-name>
+            <parent-name>[MainTrip.csv]</parent-name>
+            <remote-alias>Month</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Day Of Week' datatype='integer' name='[DayOfWeek]' role='dimension' type='quantitative' />
+      <column caption='Duration Min' datatype='real' name='[DurationMin]' role='measure' type='quantitative' />
+      <column caption='Duration Sec' datatype='integer' name='[DurationSec]' role='measure' type='quantitative' />
+      <column caption='End Station Id' datatype='integer' name='[EndStationId]' role='dimension' type='ordinal' />
+      <column caption='Ended At Oslo' datatype='datetime' name='[EndedAtOslo]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Is Weekend' datatype='integer' name='[IsWeekend]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='0' value='Weekday' />
+          <alias key='1' value='Weekend' />
+        </aliases>
+      </column>
+      <column datatype='string' name='[Start Hour Oslo (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[StartHourOslo]' default='&quot;Other&quot;' new-bin='true'>
+          <bin default-name='true' value='&quot;6&quot;'>
+            <value>6</value>
+          </bin>
+        </calculation>
+      </column>
+      <column aggregation='Sum' caption='Start Hour Oslo' datatype='integer' name='[StartHourOslo]' role='dimension' type='ordinal' />
+      <column caption='Start Station Id' datatype='integer' name='[StartStationId]' role='dimension' type='ordinal' />
+      <column caption='Started At Oslo' datatype='datetime' name='[StartedAtOslo]' role='dimension' type='ordinal' />
+      <column caption='Time Of Day' datatype='string' name='[TimeOfDay]' role='dimension' type='nominal' />
+      <column caption='MainTrip.csv' datatype='table' name='[__tableau_internal_object_id__].[MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D]' role='measure' type='quantitative' />
+      <column-instance column='[IsWeekend]' derivation='None' name='[none:IsWeekend:ok]' pivot='key' type='ordinal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/lv/fmcgg9k17hl6v_1h3rz6d7rm0000gn/T/tableau-temp/#TableauTemp_1xg34ti0mc7x3c16drgo40g5ud6o.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/20/2025 12:22:45 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>DurationSec</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[DurationSec]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DurationSec</remote-alias>
+              <ordinal>0</ordinal>
+              <family>MainTrip.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8905</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DurationMin</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[DurationMin]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DurationMin</remote-alias>
+              <ordinal>1</ordinal>
+              <family>MainTrip.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8905</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>StartedAtOslo</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[StartedAtOslo]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>StartedAtOslo</remote-alias>
+              <ordinal>2</ordinal>
+              <family>MainTrip.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>781457</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EndedAtOslo</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[EndedAtOslo]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EndedAtOslo</remote-alias>
+              <ordinal>3</ordinal>
+              <family>MainTrip.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>781559</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>StartHourOslo</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[StartHourOslo]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>StartHourOslo</remote-alias>
+              <ordinal>4</ordinal>
+              <family>MainTrip.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DayOfWeek</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[DayOfWeek]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DayOfWeek</remote-alias>
+              <ordinal>5</ordinal>
+              <family>MainTrip.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>IsWeekend</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[IsWeekend]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>IsWeekend</remote-alias>
+              <ordinal>6</ordinal>
+              <family>MainTrip.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TimeOfDay</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[TimeOfDay]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TimeOfDay</remote-alias>
+              <ordinal>7</ordinal>
+              <family>MainTrip.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>StartStationId</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[StartStationId]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>StartStationId</remote-alias>
+              <ordinal>8</ordinal>
+              <family>MainTrip.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>298</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EndStationId</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[EndStationId]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EndStationId</remote-alias>
+              <ordinal>9</ordinal>
+              <family>MainTrip.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>336</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Month</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Month</remote-alias>
+              <ordinal>10</ordinal>
+              <family>MainTrip.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:IsWeekend:ok]' palette='superfishel_stone_10_0' type='palette'>
+            <map to='#6388b4'>
+              <bucket>0</bucket>
+            </map>
+            <map to='#ffae34'>
+              <bucket>1</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='MainTrip.csv' id='MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D'>
+            <properties context=''>
+              <relation connection='textscan.1f5up1400az4e812a0xlo17u9dsw' name='MainTrip.csv' table='[MainTrip#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='integer' name='DurationSec' ordinal='0' />
+                  <column datatype='real' name='DurationMin' ordinal='1' />
+                  <column datatype='datetime' name='StartedAtOslo' ordinal='2' />
+                  <column datatype='datetime' name='EndedAtOslo' ordinal='3' />
+                  <column datatype='integer' name='StartHourOslo' ordinal='4' />
+                  <column datatype='integer' name='DayOfWeek' ordinal='5' />
+                  <column datatype='integer' name='IsWeekend' ordinal='6' />
+                  <column datatype='string' name='TimeOfDay' ordinal='7' />
+                  <column datatype='integer' name='StartStationId' ordinal='8' />
+                  <column datatype='integer' name='EndStationId' ordinal='9' />
+                  <column datatype='string' name='Month' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_6AA8DBA663A24FE783849EBD6EF3A224]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Oslo-Bike-Hourly analysis' type='sheet' worksheet='Morning Arrival Hubs' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Oslo-Bike-Hourly analysis' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_4DF8EF23AAD64330BB06A8A77E68DD6D]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Oslo-Bike-Hourly analysis' type='sheet' worksheet='Morning Starts hub' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Oslo-Bike-Hourly analysis' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Bike trips by hour'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='10'>Bike trips by hour of day – commute peaks at 07–09 and 15–17 (May–Oct 2025) </run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run fontalignment='1' fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='8'>Weekday vs weekend, Oslo time</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run bold='true' fontcolor='#606b76' fontname='.Lucida Grande UI' lmargin='225'>Bike trips by hour (Oslo time, May–Oct 2025).</run>
+            <run lmargin='225'>Æ&#10;</run>
+            <run fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='8' lmargin='225'>Weekday demand shows two sharp commute peaks around </run>
+            <run bold='true' fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='8' lmargin='225'>07–09</run>
+            <run fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='8' lmargin='225'> and </run>
+            <run bold='true' fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='8' lmargin='225'>15–17</run>
+            <run fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='8' lmargin='225'>, with the 08:00 and 16:00 hours each carrying ~68k trips. Weekends are much flatter, with a single, lower peak in the afternoon and almost no activity at night. </run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='MainTrip' name='federated.0a7men400lmmeh11pk3ml0ti9tlf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0a7men400lmmeh11pk3ml0ti9tlf'>
+            <column aggregation='Sum' caption='Is Weekend' datatype='integer' name='[IsWeekend]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Weekday' />
+                <alias key='1' value='Weekend' />
+              </aliases>
+            </column>
+            <column aggregation='Sum' caption='Start Hour Oslo' datatype='integer' name='[StartHourOslo]' role='dimension' type='ordinal' />
+            <column caption='MainTrip.csv' datatype='table' name='[__tableau_internal_object_id__].[MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[IsWeekend]' derivation='None' name='[none:IsWeekend:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[StartHourOslo]' derivation='None' name='[none:StartHourOslo:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0a7men400lmmeh11pk3ml0ti9tlf].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <slices>
+            <column>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0a7men400lmmeh11pk3ml0ti9tlf].[__tableau_internal_object_id__].[cnt:MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:StartHourOslo:ok]' value='0' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:IsWeekend:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='top' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-markers-mode' value='all' />
+                <format attr='line-interpolation' value='step' />
+                <format attr='mark-labels-show' value='false' />
+                <_.fcp.PatternedLineMarks.true...format attr='mark-line-pattern' value='dashed' />
+                <format attr='size' value='1.7031491994857788' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[__tableau_internal_object_id__].[cnt:MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D:qk]</rows>
+        <cols>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:StartHourOslo:ok]</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run bold='true' fontcolor='#757575' fontname='.Lucida Grande UI' fontsize='9'>Weekend or weekday: </run>
+              <run bold='true' fontname='.Lucida Grande UI' fontsize='9'><![CDATA[<[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:IsWeekend:ok]>]]></run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#757575' fontname='.Lucida Grande UI' fontsize='9'>Oslo time: </run>
+              <run bold='true' fontname='.Lucida Grande UI' fontsize='9'><![CDATA[<[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:StartHourOslo:ok]>]]></run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#757575' fontname='.Lucida Grande UI' fontsize='9'>Number of trips: </run>
+              <run bold='true' fontname='.Lucida Grande UI' fontsize='9'><![CDATA[<[federated.0a7men400lmmeh11pk3ml0ti9tlf].[__tableau_internal_object_id__].[cnt:MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D:qk]>]]></run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:StartHourOslo:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[__tableau_internal_object_id__].[cnt:MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[__tableau_internal_object_id__].[cnt:MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D:qk]</field>
+                      <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:IsWeekend:ok]</field>
+                      <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:StartHourOslo:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>67920</value>
+                    <value>0</value>
+                    <value>8</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='1' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run bold='true' fontcolor='#757575' fontname='.Lucida Grande UI' fontsize='9'>Weekend or weekday: </run>
+              <run bold='true' fontname='.Lucida Grande UI' fontsize='9'><![CDATA[<[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:IsWeekend:ok]>]]></run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#757575' fontname='.Lucida Grande UI' fontsize='9'>Oslo time: </run>
+              <run bold='true' fontname='.Lucida Grande UI' fontsize='9'><![CDATA[<[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:StartHourOslo:ok]>]]></run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#757575' fontname='.Lucida Grande UI' fontsize='9'>Number of trips: </run>
+              <run bold='true' fontname='.Lucida Grande UI' fontsize='9'><![CDATA[<[federated.0a7men400lmmeh11pk3ml0ti9tlf].[__tableau_internal_object_id__].[cnt:MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D:qk]>]]></run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:StartHourOslo:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[__tableau_internal_object_id__].[cnt:MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[__tableau_internal_object_id__].[cnt:MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D:qk]</field>
+                      <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:IsWeekend:ok]</field>
+                      <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:StartHourOslo:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>68764</value>
+                    <value>0</value>
+                    <value>16</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run bold='true' fontcolor='#606b76'><![CDATA[Weekend or weekday: <[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:IsWeekend:ok]>]]></run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#606b76'><![CDATA[Oslo time: <[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:StartHourOslo:ok]>]]></run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#606b76'><![CDATA[Number of trips: <[federated.0a7men400lmmeh11pk3ml0ti9tlf].[__tableau_internal_object_id__].[cnt:MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D:qk]>]]></run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:StartHourOslo:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[__tableau_internal_object_id__].[cnt:MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[__tableau_internal_object_id__].[cnt:MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D:qk]</field>
+                      <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:IsWeekend:ok]</field>
+                      <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:StartHourOslo:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>2641</value>
+                    <value>1</value>
+                    <value>8</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='4' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run bold='true' fontcolor='#606b76' fontname='.Lucida Grande UI'><![CDATA[Weekend or weekday: <[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:IsWeekend:ok]>]]></run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#606b76' fontname='.Lucida Grande UI'><![CDATA[Oslo time: <[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:StartHourOslo:ok]>]]></run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#606b76' fontname='.Lucida Grande UI'><![CDATA[Number of trips: <[federated.0a7men400lmmeh11pk3ml0ti9tlf].[__tableau_internal_object_id__].[cnt:MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D:qk]>]]></run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:StartHourOslo:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[__tableau_internal_object_id__].[cnt:MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[__tableau_internal_object_id__].[cnt:MainTrip.csv_E33F47DD8ED245428BCE24DF592D7F9D:qk]</field>
+                      <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:IsWeekend:ok]</field>
+                      <field>[federated.0a7men400lmmeh11pk3ml0ti9tlf].[none:StartHourOslo:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>13489</value>
+                    <value>1</value>
+                    <value>15</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{7BEB16D4-0C0D-4ECA-BEF2-82D2171A15F0}' />
+    </worksheet>
+    <worksheet name='Map'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='11' lmargin='225'>Station load map: trips per dock (May–Oct 2025) </run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run fontcolor='#606b76' fontname='.Lucida Grande UI' lmargin='225'>The map shows how hard each station works relative to its size. Several medium-capacity docks in the inner city handle a very high number of trips per dock, indicating where capacity upgrades or rebalancing could have the biggest impact. </run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Station_load' name='federated.17i7q2e0e0lij611eu1v41o3ybop' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.17i7q2e0e0lij611eu1v41o3ybop'>
+            <column datatype='string' name='[Area]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Capacity]' role='measure' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='Station Name' datatype='string' name='[StationName]' role='dimension' type='nominal' />
+            <column caption='Total Trips' datatype='integer' name='[TotalTrips]' role='measure' type='quantitative' />
+            <column caption='Trips Per Dock' datatype='real' name='[TripsPerDock]' role='measure' type='quantitative' />
+            <column-instance column='[Area]' derivation='Attribute' name='[attr:Area:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Capacity]' derivation='Attribute' name='[attr:Capacity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[StationName]' derivation='Attribute' name='[attr:StationName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Latitude]' derivation='None' name='[none:Latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Longitude]' derivation='None' name='[none:Longitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[TotalTrips]' derivation='None' name='[none:TotalTrips:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[TripsPerDock]' derivation='None' name='[none:TripsPerDock:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.17i7q2e0e0lij611eu1v41o3ybop].[attr:Area:nk]'>
+            <groupfilter function='level-members' level='[attr:Area:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.17i7q2e0e0lij611eu1v41o3ybop].[attr:Capacity:qk]' included-values='in-range'>
+            <min>6</min>
+            <max>50</max>
+          </filter>
+          <filter class='quantitative' column='[federated.17i7q2e0e0lij611eu1v41o3ybop].[none:TripsPerDock:qk]' included-values='in-range'>
+            <min>24.833333333333332</min>
+            <max>1245.0999999999999</max>
+          </filter>
+          <slices>
+            <column>[federated.17i7q2e0e0lij611eu1v41o3ybop].[attr:Capacity:qk]</column>
+            <column>[federated.17i7q2e0e0lij611eu1v41o3ybop].[none:TripsPerDock:qk]</column>
+            <column>[federated.17i7q2e0e0lij611eu1v41o3ybop].[attr:Area:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.17i7q2e0e0lij611eu1v41o3ybop].[none:Longitude:qk]' field-type='quantitative' max='1208172.8484405787' min='1185894.4590203147' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.17i7q2e0e0lij611eu1v41o3ybop].[none:Latitude:qk]' field-type='quantitative' max='8387062.6433506161' min='8377062.7584027471' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.17i7q2e0e0lij611eu1v41o3ybop].[none:TripsPerDock:qk]' max='1245.0999999999999' min='24.833333332999999' palette='orange_10_0' type='interpolated' />
+            <encoding attr='size' field='[federated.17i7q2e0e0lij611eu1v41o3ybop].[none:TotalTrips:qk]' field-type='quantitative' max-size='1' min-size='0' type='rangesize' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='streets' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.17i7q2e0e0lij611eu1v41o3ybop].[none:TripsPerDock:qk]' />
+              <size column='[federated.17i7q2e0e0lij611eu1v41o3ybop].[none:TotalTrips:qk]' />
+              <tooltip column='[federated.17i7q2e0e0lij611eu1v41o3ybop].[attr:StationName:nk]' />
+              <tooltip column='[federated.17i7q2e0e0lij611eu1v41o3ybop].[attr:Area:nk]' />
+              <tooltip column='[federated.17i7q2e0e0lij611eu1v41o3ybop].[attr:Capacity:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#606b76'>Total Trips:&#9;</run>
+                <run bold='true' fontcolor='#606b76'><![CDATA[<[federated.17i7q2e0e0lij611eu1v41o3ybop].[none:TotalTrips:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#606b76'>Trips Per Dock:&#9;</run>
+                <run bold='true' fontcolor='#606b76'><![CDATA[<[federated.17i7q2e0e0lij611eu1v41o3ybop].[none:TripsPerDock:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#606b76'>Station Name:&#9;</run>
+                <run bold='true' fontcolor='#606b76'><![CDATA[<[federated.17i7q2e0e0lij611eu1v41o3ybop].[attr:StationName:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#606b76' fontname='Benton Sans Book'><![CDATA[Capacity (docks): <[federated.17i7q2e0e0lij611eu1v41o3ybop].[attr:Capacity:qk]>]]></run>
+                <run>Æ&#10;&#10;</run>
+                <run fontcolor='#606b76' fontname='Benton Sans Book'>May–Oct 2025, Oslo Bysykkel </run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.3073480129241943' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.17i7q2e0e0lij611eu1v41o3ybop].[none:Latitude:qk]</rows>
+        <cols>[federated.17i7q2e0e0lij611eu1v41o3ybop].[none:Longitude:qk]</cols>
+      </table>
+      <simple-id uuid='{91A9D63E-CD24-485C-95CC-6AF7979FE8B4}' />
+    </worksheet>
+    <worksheet name='Morning Arrival Hubs'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='10'>Weekday morning (07–09): stations with most trip end</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run bold='true' fontcolor='#606b76' fontname='.Lucida Grande UI' lmargin='225'>Morning arrival hubs (07–09, weekdays)</run>
+            <run lmargin='225'>Æ&#10;</run>
+            <run fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='8' lmargin='225'>During the morning peak, the largest net inflows of bikes are concentrated in the inner-east neighbourhoods around Grünerløkka, Sofienberg and Sagene. Stations such as Fagerheimgata, Sofienbergparken nordvest, Alexander Kiellands plass and Olaf Ryes plass receive far more trips than they send between 07–09. These work as key arrival hubs, where docks are more likely to become full unless bikes are redistributed. </run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Morning_commute' name='federated.1b05i5s0zwyrm11gu25p81km7p9n' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1b05i5s0zwyrm11gu25p81km7p9n'>
+            <column datatype='string' name='[Area]' role='dimension' type='nominal' />
+            <column caption='Net Flow' datatype='integer' name='[NetFlow]' role='measure' type='quantitative' />
+            <column caption='Station Name' datatype='string' name='[StationName]' role='dimension' type='nominal' />
+            <column-instance column='[Area]' derivation='None' name='[none:Area:nk]' pivot='key' type='nominal' />
+            <column-instance column='[NetFlow]' derivation='None' name='[none:NetFlow:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[StationName]' derivation='None' name='[none:StationName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[NetFlow]' derivation='Sum' name='[sum:NetFlow:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[Action (Area,Station Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_4DF8EF23AAD64330BB06A8A77E68DD6D]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Area]' />
+              <groupfilter function='level-members' level='[StationName]' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:NetFlow:qk]' included-values='in-range'>
+            <min>1144</min>
+            <max>1973</max>
+          </filter>
+          <filter class='categorical' column='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:StationName:nk]'>
+            <groupfilter function='level-members' level='[none:StationName:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:StationName:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[sum:NetFlow:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:NetFlow:qk]</column>
+            <column>[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:StationName:nk]</column>
+            <column>[federated.1b05i5s0zwyrm11gu25p81km7p9n].[Action (Area,Station Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[sum:NetFlow:qk]' scope='cols' value='Net Morning Arrivals' />
+            <format attr='display' class='0' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[sum:NetFlow:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height-header' value='20' />
+            <format attr='color' data-class='subtotal' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:StationName:nk]' value='#000000' />
+            <format attr='font-weight' data-class='subtotal' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:StationName:nk]' value='bold' />
+            <format attr='font-size' data-class='subtotal' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:StationName:nk]' value='8' />
+            <format attr='font-family' data-class='subtotal' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:StationName:nk]' value='Gill Sans' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='color' value='#606b76' />
+            <format attr='font-size' value='9' />
+            <format attr='font-family' value='.Lucida Grande UI' />
+            <format attr='font-weight' value='normal' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:NetFlow:qk]' value='' />
+            <format attr='color' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:StationName:nk]' value='#606b76' />
+            <format attr='font-weight' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:StationName:nk]' value='bold' />
+            <format attr='font-size' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[sum:NetFlow:qk]' value='9' />
+            <format attr='font-weight' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[sum:NetFlow:qk]' value='bold' />
+            <format attr='color' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[sum:NetFlow:qk]' value='#606b76' />
+            <format attr='font-family' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[sum:NetFlow:qk]' value='.Lucida Grande UI' />
+            <format attr='font-family' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:StationName:nk]' value='.Lucida Grande UI' />
+            <format attr='font-size' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:StationName:nk]' value='9' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='axis-title'>
+            <format attr='font-family' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:NetFlow:qk]' value='Tableau Book' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:Area:nk]' />
+              <text column='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[sum:NetFlow:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-transparency' value='180' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:StationName:nk]</rows>
+        <cols>[federated.1b05i5s0zwyrm11gu25p81km7p9n].[sum:NetFlow:qk]</cols>
+      </table>
+      <simple-id uuid='{1E6E0A1C-36D8-45AB-B93A-1739880532DA}' />
+    </worksheet>
+    <worksheet name='Morning Starts hub'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='10' lmargin='225'>Weekday morning (07–09): stations with most trip starts </run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run bold='true' fontcolor='#606b76' fontname='.Lucida Grande UI' lmargin='225'>Morning origin hubs (07–09, weekdays)</run>
+            <run lmargin='225'>Æ&#10;</run>
+            <run fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='8' lmargin='225'>The highest numbers of morning trip starts come from stations in dense residential and campus areas, such as Fagerheimgata / Sofienberg, Alexander Kiellands plass, and nearby stops in Grünerløkka–Sofienberg–Sagene. These locations act as key departure hubs at the start of the commute window. </run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Morning_commute' name='federated.1b05i5s0zwyrm11gu25p81km7p9n' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1b05i5s0zwyrm11gu25p81km7p9n'>
+            <column datatype='string' name='[Area]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Starts]' role='measure' type='quantitative' />
+            <column caption='Station Name' datatype='string' name='[StationName]' role='dimension' type='nominal' />
+            <column-instance column='[Area]' derivation='None' name='[none:Area:nk]' pivot='key' type='nominal' />
+            <column-instance column='[StationName]' derivation='None' name='[none:StationName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Starts]' derivation='Sum' name='[sum:Starts:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[Action (Area,Station Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_6AA8DBA663A24FE783849EBD6EF3A224]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Area]' />
+              <groupfilter function='level-members' level='[StationName]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:StationName:nk]'>
+            <groupfilter count='15' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Starts])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:StationName:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:StationName:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[sum:Starts:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:StationName:nk]</column>
+            <column>[federated.1b05i5s0zwyrm11gu25p81km7p9n].[Action (Area,Station Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[sum:Starts:qk]' field-type='quantitative' max='2561' min='0' range-type='fixed' scope='cols' type='space' />
+            <format attr='display' class='0' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[sum:Starts:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#606b76' />
+            <format attr='font-family' value='.Lucida Grande UI' />
+            <format attr='font-size' value='8' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:StationName:nk]' value='.Lucida Grande UI' />
+            <format attr='font-weight' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:StationName:nk]' value='bold' />
+            <format attr='color' field='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:StationName:nk]' value='#606b76' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:Area:nk]' />
+              <text column='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[sum:Starts:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#606b76' fontname='.Lucida Grande UI'>&lt;</run>
+                <run bold='true' fontcolor='#606b76' fontname='.Lucida Grande UI'>[federated.1b05i5s0zwyrm11gu25p81km7p9n].[sum:Starts:qk]</run>
+                <run bold='true' fontcolor='#606b76' fontname='.Lucida Grande UI'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-transparency' value='180' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#d4d4d4' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:StationName:nk]</rows>
+        <cols>[federated.1b05i5s0zwyrm11gu25p81km7p9n].[sum:Starts:qk]</cols>
+      </table>
+      <simple-id uuid='{017160D8-6C4B-499E-8C33-82836E7342B4}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Oslo-Bike-Hourly analysis'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98490' id='22' param='horz' type-v2='layout-flow' w='99112' x='444' y='755'>
+            <zone h='98490' id='19' param='vert' type-v2='layout-flow' w='99112' x='444' y='755'>
+              <zone h='96604' id='15' param='horz' type-v2='layout-flow' w='98000' x='1000' y='1698'>
+                <zone h='96604' id='3' param='vert' type-v2='layout-flow' w='98000' x='1000' y='1698'>
+                  <zone forceUpdate='true' h='3680' id='20' type-v2='text' w='98000' x='1000' y='1698'>
+                    <formatted-text>
+                      <run bold='true' fontalignment='1' fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='10'>Oslo bike – weekday and weekend commute patterns (May–Oct 2025)</run>
+                      <run fontalignment='1' fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='10'>Æ </run>
+                      <run fontalignment='1'>Æ&#10;</run>
+                      <run fontalignment='1' fontcolor='#606b76' fontname='.Lucida Grande UI'>Usage peaks at 07–09 and 15–17; morning origins and arrivals highlight key commuter hubs. </run>
+                    </formatted-text>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone fixed-size='328' h='30943' id='5' is-fixed='true' name='Bike trips by hour' show-caption='true' show-title='false' w='98000' x='1000' y='5378'>
+                    <layout-cache minheight='157' type-h='scalable' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='0' />
+                      <format attr='padding' value='8' />
+                    </zone-style>
+                  </zone>
+                  <zone h='61975' id='6' param='horz' type-v2='layout-flow' w='98000' x='1000' y='36321'>
+                    <zone h='61975' id='12' name='Morning Starts hub' show-caption='true' w='49000' x='1000' y='36321'>
+                      <layout-cache minwidth='260' type-h='cell' type-w='scalable' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='0' />
+                        <format attr='padding' value='8' />
+                      </zone-style>
+                    </zone>
+                    <zone h='61975' id='13' name='Morning Arrival Hubs' show-caption='true' w='49000' x='50000' y='36321'>
+                      <layout-cache minwidth='260' type-h='cell' type-w='scalable' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='0' />
+                        <format attr='padding' value='8' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='padding' value='10' />
+                <format attr='background-color' value='#e9f3f2' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='900' minheight='900' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='26' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98490' id='25' param='vert' type-v2='layout-flow' w='99112' x='444' y='755'>
+                <zone forceUpdate='true' h='3680' id='20' type-v2='text' w='98000' x='1000' y='1698'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='10'>Oslo bike – weekday and weekend commute patterns (May–Oct 2025)</run>
+                    <run fontalignment='1' fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='10'>Æ </run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run fontalignment='1' fontcolor='#606b76' fontname='.Lucida Grande UI'>Usage peaks at 07–09 and 15–17; morning origins and arrivals highlight key commuter hubs. </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='232' h='30943' id='5' is-fixed='true' name='Bike trips by hour' show-caption='true' show-title='false' w='98000' x='1000' y='5378'>
+                  <layout-cache minheight='157' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='61975' id='12' is-fixed='true' name='Morning Starts hub' show-caption='true' w='49000' x='1000' y='36321'>
+                  <layout-cache minwidth='260' type-h='cell' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='61975' id='13' is-fixed='true' name='Morning Arrival Hubs' show-caption='true' w='49000' x='50000' y='36321'>
+                  <layout-cache minwidth='260' type-h='cell' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{BDC16EE1-397E-464A-92EA-6BD0F1F86DC3}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Station Load'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='Station_load' name='federated.17i7q2e0e0lij611eu1v41o3ybop' />
+      </datasources>
+      <datasource-dependencies datasource='federated.17i7q2e0e0lij611eu1v41o3ybop'>
+        <column datatype='string' name='[Area]' role='dimension' type='nominal' />
+        <column datatype='integer' name='[Capacity]' role='measure' type='quantitative' />
+        <column caption='Trips Per Dock' datatype='real' name='[TripsPerDock]' role='measure' type='quantitative' />
+        <column-instance column='[Area]' derivation='Attribute' name='[attr:Area:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Capacity]' derivation='Attribute' name='[attr:Capacity:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[TripsPerDock]' derivation='None' name='[none:TripsPerDock:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='89646' id='12' param='horz' type-v2='layout-flow' w='98994' x='503' y='881'>
+            <zone h='89646' id='8' param='horz' type-v2='layout-flow' w='98994' x='503' y='881'>
+              <zone h='89646' id='3' param='vert' type-v2='layout-flow' w='98994' x='503' y='881'>
+                <zone fixed-size='81' forceUpdate='true' h='9802' id='5' is-fixed='true' type-v2='text' w='97106' x='1447' y='2533'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='12' lmargin='225'>Oslo city bike – station load vs capacity (May–Oct 2025)</run>
+                    <run fontalignment='1' lmargin='225'>Æ&#10;</run>
+                    <run fontalignment='1' fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='10' lmargin='225'>Circle size shows total trips per station; colour shows </run>
+                    <run bold='true' fontalignment='1' fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='10' lmargin='225'>trips per dock</run>
+                    <run fontalignment='1' fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='10' lmargin='225'>, highlighting which docks work hardest. </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='76540' id='6' name='Map' show-caption='true' show-title='false' w='97106' x='1447' y='12335'>
+                  <layout-cache minheight='224' minwidth='201' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#ffffff' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='20' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='padding' value='15' />
+                  <format attr='background-color' value='#e9f3f2' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='8592' id='16' type-v2='text' w='98994' x='503' y='90527'>
+            <formatted-text>
+              <run bold='true' fontcolor='#0e0e0e' fontname='Helvetica Neue' fontsize='10' lmargin='225'>How to read this map</run>
+              <run lmargin='225'>Æ&#10;</run>
+              <run fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='8' lmargin='225'>• Circle size = total trips at the station (May–Oct 2025)</run>
+              <run lmargin='225'>Æ&#10;</run>
+              <run fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='8' lmargin='225'>• Colour = trips per dock (darker = more pressure per slot)</run>
+              <run lmargin='225'>Æ&#10;</run>
+              <run fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='8' lmargin='225'>• Use the Capacity slider to focus on small / medium stations.</run>
+              <run lmargin='225'>Æ&#10;</run>
+              <run fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='8' lmargin='225'>• Use Trips per dock and Area to zoom in on the busiest neighbourhoods. </run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='0' />
+              <format attr='background-color' value='#e9f3f2' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone fixed-size='160' h='33260' id='11' is-fixed='true' param='vert' type-v2='layout-flow' w='10069' x='87351' y='8921'>
+          <zone h='7599' id='14' name='Map' param='[federated.17i7q2e0e0lij611eu1v41o3ybop].[none:TripsPerDock:qk]' type-v2='filter' values='database' w='10069' x='87351' y='8921'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone h='7599' id='13' name='Map' param='[federated.17i7q2e0e0lij611eu1v41o3ybop].[attr:Capacity:qk]' type-v2='filter' values='database' w='10069' x='87351' y='16520'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone h='18062' id='15' mode='radiolist' name='Map' param='[federated.17i7q2e0e0lij611eu1v41o3ybop].[attr:Area:nk]' show-apply='true' type-v2='filter' values='database' w='10069' x='87351' y='24119'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#dfedeb' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='18' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98238' id='17' param='vert' type-v2='layout-flow' w='98994' x='503' y='881'>
+                <zone fixed-size='81' forceUpdate='true' h='9802' id='5' type-v2='text' w='97106' x='1447' y='2533'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='12' lmargin='225'>Oslo city bike – station load vs capacity (May–Oct 2025)</run>
+                    <run fontalignment='1' lmargin='225'>Æ&#10;</run>
+                    <run fontalignment='1' fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='10' lmargin='225'>Circle size shows total trips per station; colour shows </run>
+                    <run bold='true' fontalignment='1' fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='10' lmargin='225'>trips per dock</run>
+                    <run fontalignment='1' fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='10' lmargin='225'>, highlighting which docks work hardest. </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7599' id='14' name='Map' param='[federated.17i7q2e0e0lij611eu1v41o3ybop].[none:TripsPerDock:qk]' type-v2='filter' values='database' w='10069' x='87351' y='8921'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone h='7599' id='13' name='Map' param='[federated.17i7q2e0e0lij611eu1v41o3ybop].[attr:Capacity:qk]' type-v2='filter' values='database' w='10069' x='87351' y='16520'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone h='18062' id='15' mode='dropdown' name='Map' param='[federated.17i7q2e0e0lij611eu1v41o3ybop].[attr:Area:nk]' show-apply='true' type-v2='filter' values='database' w='10069' x='87351' y='24119'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='76540' id='6' is-fixed='true' name='Map' show-caption='true' show-title='false' w='97106' x='1447' y='12335'>
+                  <layout-cache minheight='224' minwidth='201' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#ffffff' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone h='8592' id='16' type-v2='text' w='98994' x='503' y='90527'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#0e0e0e' fontname='Helvetica Neue' fontsize='10' lmargin='225'>How to read this map</run>
+                    <run lmargin='225'>Æ&#10;</run>
+                    <run fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='8' lmargin='225'>• Circle size = total trips at the station (May–Oct 2025)</run>
+                    <run lmargin='225'>Æ&#10;</run>
+                    <run fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='8' lmargin='225'>• Colour = trips per dock (darker = more pressure per slot)</run>
+                    <run lmargin='225'>Æ&#10;</run>
+                    <run fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='8' lmargin='225'>• Use the Capacity slider to focus on small / medium stations.</run>
+                    <run lmargin='225'>Æ&#10;</run>
+                    <run fontcolor='#606b76' fontname='.Lucida Grande UI' fontsize='8' lmargin='225'>• Use Trips per dock and Area to zoom in on the busiest neighbourhoods. </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#e9f3f2' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{EB661D05-EE91-4CD7-BBFB-434BC7CC1105}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='72'>
+    <window class='worksheet' name='Bike trips by hour'>
+      <cards>
+        <edge name='left'>
+          <strip size='197'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='94'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{4D146743-56FF-44B2-95B1-AF1EC82578BB}' />
+    </window>
+    <window class='worksheet' name='Morning Arrival Hubs'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='35'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:NetFlow:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:Area:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='94'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{7180D854-48F8-414C-8480-4F34E5783648}' />
+    </window>
+    <window class='worksheet' name='Morning Starts hub'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1b05i5s0zwyrm11gu25p81km7p9n].[none:Area:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='94'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{92D9FC21-55C5-4860-828F-B0B999F8DFB1}' />
+    </window>
+    <window class='worksheet' name='Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.17i7q2e0e0lij611eu1v41o3ybop].[attr:Capacity:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.17i7q2e0e0lij611eu1v41o3ybop].[none:TripsPerDock:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='94'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='16' />
+      </viewpoint>
+      <simple-id uuid='{295320B4-EE0A-4F37-B438-F5A9E5E41D67}' />
+    </window>
+    <window class='dashboard' name='Oslo-Bike-Hourly analysis'>
+      <viewpoints>
+        <viewpoint name='Bike trips by hour'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Morning Arrival Hubs'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Morning Starts hub'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='5' />
+      <simple-id uuid='{0F081909-3E4E-49FC-B57E-706526B7E942}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Station Load'>
+      <viewpoints>
+        <viewpoint name='Map'>
+          <zoom type='entire-view' />
+          <default-map-tool-selection tool='16' />
+        </viewpoint>
+      </viewpoints>
+      <active id='5' />
+      <simple-id uuid='{6BE71822-C42D-4453-825E-DB02C1068524}' />
+    </window>
+  </windows>
+</workbook>
