@@ -372,25 +372,27 @@ GROUP BY
     s.Area;
 
 GO
+    DROP VIEW IF EXISTS dbo.v_station_load;
 
-DROP VIEW IF EXISTS dbo.v_station_load;
 GO
-
-CREATE VIEW dbo.v_station_load AS
-WITH TripStarts AS (
-    SELECT
-        StartStationId AS StationId,
-        COUNT(*)       AS Starts
-    FROM dbo.fact_trip
-    GROUP BY StartStationId
-),
-TripEnds AS (
-    SELECT
-        EndStationId AS StationId,
-        COUNT(*)     AS Ends
-    FROM dbo.fact_trip
-    GROUP BY EndStationId
-)
+    CREATE VIEW dbo.v_station_load AS WITH TripStarts AS (
+        SELECT
+            StartStationId AS StationId,
+            COUNT(*) AS Starts
+        FROM
+            dbo.fact_trip
+        GROUP BY
+            StartStationId
+    ),
+    TripEnds AS (
+        SELECT
+            EndStationId AS StationId,
+            COUNT(*) AS Ends
+        FROM
+            dbo.fact_trip
+        GROUP BY
+            EndStationId
+    )
 SELECT
     s.StationId,
     s.StationName,
@@ -399,23 +401,55 @@ SELECT
     s.Longitude,
     s.Capacity,
     COALESCE(ts.Starts, 0) AS TripsStarted,
-    COALESCE(te.Ends,   0) AS TripsEnded,
+    COALESCE(te.Ends, 0) AS TripsEnded,
     COALESCE(ts.Starts, 0) + COALESCE(te.Ends, 0) AS TotalTrips,
     CASE
-        WHEN s.Capacity IS NULL OR s.Capacity = 0 THEN NULL
-        ELSE CAST(COALESCE(ts.Starts, 0) + COALESCE(te.Ends, 0) AS FLOAT) / s.Capacity
+        WHEN s.Capacity IS NULL
+        OR s.Capacity = 0 THEN NULL
+        ELSE CAST(
+            COALESCE(ts.Starts, 0) + COALESCE(te.Ends, 0) AS FLOAT
+        ) / s.Capacity
     END AS TripsPerDock
-FROM dbo.dim_station AS s
-LEFT JOIN TripStarts AS ts ON ts.StationId = s.StationId
-LEFT JOIN TripEnds   AS te ON te.StationId = s.StationId
-WHERE COALESCE(ts.Starts, 0) + COALESCE(te.Ends, 0) > 0;
+FROM
+    dbo.dim_station AS s
+    LEFT JOIN TripStarts AS ts ON ts.StationId = s.StationId
+    LEFT JOIN TripEnds AS te ON te.StationId = s.StationId
+WHERE
+    COALESCE(ts.Starts, 0) + COALESCE(te.Ends, 0) > 0;
+
 GO
+SELECT
+    *
+FROM
+    dbo.v_station_load
+ORDER BY
+    TripsPerDock DESC;
 
-SELECT * FROM dbo.v_station_load
-ORDER BY TripsPerDock DESC;
+SELECT
+    *
+FROM
+    v_evening_commute_netflow;
 
-SELECT * FROM v_evening_commute_netflow;
+SELECT
+    *
+FROM
+    v_morning_commute_netflow;
 
-SELECT * FROM v_morning_commute_netflow;
+SELECT
+    *
+FROM
+    fact_trip;
 
-SELECT * FROM fact_trip;
+SELECT
+    MONTH(StartedAtOslo) TripMonth,
+    COUNT(*) AS TripCount
+FROM
+    fact_trip
+WHERE
+    StartedAtOslo IS NOT NULL
+GROUP BY
+    MONTH(StartedAtOslo)
+ORDER BY
+    TripMonth;
+
+
